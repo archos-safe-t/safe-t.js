@@ -14,7 +14,7 @@ import {CallHelper} from './utils/call';
 import * as trezor from './trezortypes';
 import type {TxInfo} from './utils/signbjstx';
 import type {EthereumSignature} from './utils/signethtx';
-import type {Transport, TrezorDeviceInfoWithSession as DeviceDescriptor} from 'trezor-link';
+import type {Transport, TrezorDeviceInfoWithSession as DeviceDescriptor} from 'safe-t-link';
 import type Device from './device';
 
 export type MessageResponse<T> = {

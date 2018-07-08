@@ -16,7 +16,7 @@ import type {DeviceDescriptorDiff} from './descriptor-stream';
 import type {
     Transport,
     TrezorDeviceInfoWithSession as DeviceDescriptor,
-} from 'trezor-link';
+} from 'safe-t-link';
 
 const CONFIG_URL = 'https://wallet.trezor.io/data/config_signed.bin';
 

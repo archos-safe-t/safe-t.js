@@ -4,7 +4,7 @@
 import randombytes from 'randombytes';
 
 import type {DefaultMessageResponse} from '../session';
-import type {Transport} from 'trezor-link';
+import type {Transport} from 'safe-t-link';
 import type Session from '../session';
 
 function assertType(res: DefaultMessageResponse, resTypes: string) {

@@ -4,7 +4,7 @@
 import 'whatwg-fetch';
 import 'unorm';
 
-import link from 'trezor-link';
+import link from 'safe-t-link';
 import DeviceList from './device-list';
 
 const {BridgeV1, BridgeV2, Extension, Lowlevel, WebUsb, Fallback, Parallel} = link;

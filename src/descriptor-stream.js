@@ -6,7 +6,7 @@ import {Event1} from './flow-events';
 
 import {lock} from './utils/connectionLock';
 
-import type {Transport, TrezorDeviceInfoWithSession as DeviceDescriptor} from 'trezor-link';
+import type {Transport, TrezorDeviceInfoWithSession as DeviceDescriptor} from 'safe-t-link';
 
 export type DeviceDescriptorDiff = {
     connected: Array<DeviceDescriptor>,

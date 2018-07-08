@@ -13,7 +13,7 @@ import * as bitcoin from 'bitcoinjs-lib-zcash';
 
 import type DeviceList from './device-list';
 import type {Features} from './trezortypes';
-import type {Transport, TrezorDeviceInfoWithSession as DeviceDescriptor} from 'trezor-link';
+import type {Transport, TrezorDeviceInfoWithSession as DeviceDescriptor} from 'safe-t-link';
 
 // a slight hack
 // this error string is hard-coded
