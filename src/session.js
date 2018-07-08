@@ -187,8 +187,10 @@ export default class Session extends EventEmitter {
         });
     }
 
-    wipeDevice(): Promise<MessageResponse<trezor.Success>> {
-        return this.typedCall('WipeDevice', 'Success');
+    wipeDevice(
+        force: ?boolean
+    ): Promise<MessageResponse<trezor.Success>> {
+        return this.typedCall('WipeDevice', 'Success', {force: force});
     }
 
     resetDevice(settings: trezor.ResetDeviceSettings): Promise<MessageResponse<trezor.Success>> {
