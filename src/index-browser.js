@@ -58,6 +58,7 @@ export {
     installers,
     latestVersion,
     udevInstallers,
+    preferredPlatform,
 } from './installers';
 
 export type {

@@ -172,7 +172,7 @@ function isPreferred(installer: string | Array<string>, platform: string): boole
     }
 }
 
-function preferredPlatform(): string {
+export function preferredPlatform(): string {
     const ver = navigator.userAgent;
 
     if (ver.match(/Win64|WOW64/)) return 'win64';
