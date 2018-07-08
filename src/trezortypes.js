@@ -36,6 +36,7 @@ export type Features = {
     flags?: number;
     model?: string;
     unfinished_backup?: boolean;
+    pin_remaining_zones?: number;
 };
 
 export type ResetDeviceSettings = {
