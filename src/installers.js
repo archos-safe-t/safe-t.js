@@ -47,8 +47,8 @@ function fillInstallerUrl(installer: ProtoInstallerShort, domain: string): Proto
     };
 }
 
-const DATA_DOMAIN = 'https://app.safe-t.io/assets';
-const BRIDGE_VERSION_URL: string = DATA_DOMAIN + '/bridge_lastest_version.txt';
+const DATA_DOMAIN = 'https://storage.googleapis.com/safe-t-software';
+const BRIDGE_VERSION_URL: string = DATA_DOMAIN + '/bridge/latest_version.txt';
 
 const BRIDGE_INSTALLERS: Array<ProtoInstallerShort> = [{
     shortUrl: '/bridge/%version%/safe-t-bridge-%version%-win32-install.exe',
