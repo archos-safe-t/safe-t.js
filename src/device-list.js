@@ -18,7 +18,7 @@ import type {
     TrezorDeviceInfoWithSession as DeviceDescriptor,
 } from 'safe-t-link';
 
-const CONFIG_URL = 'https://wallet.trezor.io/data/config_signed.bin';
+const CONFIG_URL = 'https://wallet.safe-t.io/assets/config_signed.bin';
 
 export type DeviceListOptions = {
     debug?: boolean;
