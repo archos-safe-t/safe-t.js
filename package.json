@@ -1,16 +1,16 @@
 {
-  "name": "trezor.js",
+  "name": "safe-t.js",
   "version": "6.15.19",
-  "author": "TREZOR <info@trezor.io>",
-  "homepage": "https://github.com/trezor/trezor.js",
-  "description": "High-level Javascript API for Bitcoin Trezor",
+  "author": "Archos Safe-T <software@archos.com>, TREZOR <info@trezor.io>",
+  "homepage": "https://github.com/archos-safe-t/safe-t.js",
+  "description": "High-level Javascript API for Archos Safe-T",
   "license": "LGPL-3.0",
   "repository": {
     "type": "git",
-    "url": "git://github.com/trezor/trezor.js.git"
+    "url": "git://github.com/archos-safe-t/safe-t.js.git"
   },
   "bugs": {
-    "url": "https://github.com/trezor/trezor.js/issues"
+    "url": "https://github.com/archos-safe-t/safe-t.js/issues"
   },
   "keywords": [
     "safe-t",

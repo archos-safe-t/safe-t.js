@@ -47,31 +47,31 @@ function fillInstallerUrl(installer: ProtoInstallerShort, domain: string): Proto
     };
 }
 
-const DATA_DOMAIN = 'https://mytrezor.s3.amazonaws.com';
-const BRIDGE_VERSION_URL: string = DATA_DOMAIN + '/bridge/latest.txt';
+const DATA_DOMAIN = 'https://app.safe-t.io/assets';
+const BRIDGE_VERSION_URL: string = DATA_DOMAIN + '/bridge_lastest_version.txt';
 
 const BRIDGE_INSTALLERS: Array<ProtoInstallerShort> = [{
-    shortUrl: '/bridge/%version%/trezor-bridge-%version%-win32-install.exe',
+    shortUrl: '/bridge/%version%/safe-t-bridge-%version%-win32-install.exe',
     label: 'Windows',
     platform: ['win32', 'win64'],
 }, {
-    shortUrl: '/bridge/%version%/trezor-bridge-%version%.pkg',
+    shortUrl: '/bridge/%version%/safe-t-bridge-%version%.pkg',
     label: 'Mac OS X',
     platform: 'mac',
 }, {
-    shortUrl: '/bridge/%version%/trezor-bridge_%version%_amd64.deb',
+    shortUrl: '/bridge/%version%/safe-t-bridge_%version%_amd64.deb',
     label: 'Linux 64-bit (deb)',
     platform: 'deb64',
 }, {
-    shortUrl: '/bridge/%version%/trezor-bridge-%version%-1.x86_64.rpm',
+    shortUrl: '/bridge/%version%/safe-t-bridge-%version%-1.x86_64.rpm',
     label: 'Linux 64-bit (rpm)',
     platform: 'rpm64',
 }, {
-    shortUrl: '/bridge/%version%/trezor-bridge_%version%_i386.deb',
+    shortUrl: '/bridge/%version%/safe-t-bridge_%version%_i386.deb',
     label: 'Linux 32-bit (deb)',
     platform: 'deb32',
 }, {
-    shortUrl: '/bridge/%version%/trezor-bridge-%version%-1.i386.rpm',
+    shortUrl: '/bridge/%version%/safe-t-bridge-%version%-1.i386.rpm',
     label: 'Linux 32-bit (rpm)',
     platform: 'rpm32',
 }];

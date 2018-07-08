@@ -211,21 +211,21 @@ export default class DeviceList extends EventEmitter {
             transport.setBridgeLatestUrl(this.options.bridgeVersionUrl);
         }
         if (this.options.debugInfo) {
-            console.log('[trezor.js] [device list] Initializing transports');
+            console.log('[safe-t.js] [device list] Initializing transports');
         }
         transport.init(this.options.debug).then(() => {
             if (this.options.debugInfo) {
-                console.log('[trezor.js] [device list] Configuring transports');
+                console.log('[safe-t.js] [device list] Configuring transports');
             }
             this._configTransport(transport).then(() => {
                 if (this.options.debugInfo) {
-                    console.log('[trezor.js] [device list] Configuring transports done');
+                    console.log('[safe-t.js] [device list] Configuring transports done');
                 }
                 this.transportEvent.emit(transport);
             });
         }, error => {
             if (this.options.debugInfo) {
-                console.error('[trezor.js] [device list] Error in transport', error);
+                console.error('[safe-t.js] [device list] Error in transport', error);
             }
             this.errorEvent.emit(error);
         });
@@ -238,7 +238,7 @@ export default class DeviceList extends EventEmitter {
         previous: ?UnacquiredDevice
     ): void {
         if (this.options.debugInfo) {
-            console.log('[trezor.js] [device list] Creating Device', descriptor, previous);
+            console.log('[safe-t.js] [device list] Creating Device', descriptor, previous);
         }
 
         const path = descriptor.path.toString();
@@ -254,7 +254,7 @@ export default class DeviceList extends EventEmitter {
                 this.connectUnacquiredEvent.emit(device);
             }
         }).catch(err => {
-            console.debug('[trezor.js] [device list] Cannot create device', err);
+            console.debug('[safe-t.js] [device list] Cannot create device', err);
         });
     }
 
@@ -288,7 +288,7 @@ export default class DeviceList extends EventEmitter {
         stream: DescriptorStream
     ): Promise<UnacquiredDevice> {
         if (this.options.debugInfo) {
-            console.log('[trezor.js] [device list] Creating Unacquired Device', descriptor);
+            console.log('[safe-t.js] [device list] Creating Unacquired Device', descriptor);
         }
 
         // if (this.getSession(descriptor.path) == null) {

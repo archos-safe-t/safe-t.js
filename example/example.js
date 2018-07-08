@@ -1,14 +1,14 @@
 'use strict';
 
 // installed from npm
-var trezor = require('trezor.js');
+var safet = require('safe-t.js');
 
 // set to true to see messages
 var debug = true;
 
 // DeviceList encapsulates transports, sessions, device enumeration and other
 // low-level things, and provides easy-to-use event interface.
-var list = new trezor.DeviceList({debug: debug});
+var list = new safet.DeviceList({debug: debug});
 
 list.on('connect', function (device) {
     if (debug) {

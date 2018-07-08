@@ -73,7 +73,7 @@ export class CallHelper {
         const logMessage: Object = filterForLog(type, msg);
 
         if (this.session.debug) {
-            console.log('[trezor.js] [call] Sending', type, logMessage);
+            console.log('[safe-t.js] [call] Sending', type, logMessage);
         }
         this.session.sendEvent.emit(type, msg);
 
@@ -82,14 +82,14 @@ export class CallHelper {
                 const logMessage = filterForLog(res.type, res.message);
 
                 if (this.session.debug) {
-                    console.log('[trezor.js] [call] Received', res.type, logMessage);
+                    console.log('[safe-t.js] [call] Received', res.type, logMessage);
                 }
                 this.session.receiveEvent.emit(res.type, res.message);
                 return res;
             },
             err => {
                 if (this.session.debug) {
-                    console.log('[trezor.js] [call] Received error', err);
+                    console.log('[safe-t.js] [call] Received error', err);
                 }
                 this.session.errorEvent.emit(err);
                 throw err;
@@ -203,7 +203,7 @@ export class CallHelper {
                 }
             })) {
                 if (this.session.debug) {
-                    console.warn('[trezor.js] [call] PIN callback not configured, cancelling request');
+                    console.warn('[safe-t.js] [call] PIN callback not configured, cancelling request');
                 }
                 reject(new Error('PIN callback not configured'));
             }
@@ -220,7 +220,7 @@ export class CallHelper {
                 }
             })) {
                 if (this.session.debug) {
-                    console.warn('[trezor.js] [call] Passphrase callback not configured, cancelling request');
+                    console.warn('[safe-t.js] [call] Passphrase callback not configured, cancelling request');
                 }
                 reject(new Error('Passphrase callback not configured'));
             }
@@ -237,7 +237,7 @@ export class CallHelper {
                 }
             })) {
                 if (this.session.debug) {
-                    console.warn('[trezor.js] [call] Word callback not configured, cancelling request');
+                    console.warn('[safe-t.js] [call] Word callback not configured, cancelling request');
                 }
                 reject(new Error('Word callback not configured'));
             }

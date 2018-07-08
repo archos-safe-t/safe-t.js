@@ -104,7 +104,7 @@ export default class Session extends EventEmitter {
 
     release(onclose: boolean): Promise<void> {
         if (this.debug) {
-            console.log('[trezor.js] [session] releasing');
+            console.log('[safe-t.js] [session] releasing');
         }
         return this._transport.release(this._sessionId, onclose);
     }
@@ -429,7 +429,7 @@ export default class Session extends EventEmitter {
 
             if (!verified) {
                 if (this.debug) {
-                    console.warn('[trezor.js] [session] Address verification failed', {
+                    console.warn('[safe-t.js] [session] Address verification failed', {
                         path: path,
                         jsAddress: address,
                         trezorAddress: res.message.address,
